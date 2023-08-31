@@ -1,12 +1,12 @@
-import '../entities/movie.dart';
-import '../repositories/movie_repository.dart';
+// import '../entities/movie.dart';
+// import '../repositories/movie_repository.dart';
 
-class GetMovieListUseCase {
-  final MovieRepository movieRepository;
+// class GetMovieListUseCase {
+//   final MovieRepository movieRepository;
 
-  GetMovieListUseCase(this.movieRepository);
+//   GetMovieListUseCase(this.movieRepository);
 
-  Future<MovieEntity> getMovieList() {
-    return movieRepository.getMovieList();
-  }
-}
+//   Future<MovieEntity> getMovieList() {
+//     return movieRepository.getMovieList();
+//   }
+// }

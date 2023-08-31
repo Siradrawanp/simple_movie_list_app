@@ -1,7 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:movie_app/src/features/movie_list/data/data_sources/remote_data_sources.dart';
-import 'package:movie_app/src/features/movie_list/domain/entities/movie.dart';
-import 'package:movie_app/src/features/movie_list/domain/repositories/movie_repository.dart';
+import 'dart:developer';
+
+import '../../domain/repositories/movie_repository.dart';
+import '../data_sources/remote_data_sources.dart';
+import '../model/movie_model.dart';
 
 class MovieRepositoryImpl extends MovieRepository {
   final MovieRemoteDataSources movieRemoteDataSources;
@@ -10,11 +11,12 @@ class MovieRepositoryImpl extends MovieRepository {
   });
 
   @override
-  Future<MovieEntity> getMovieList() async {
+  Future<List<MovieModel>> getMovieList() async {
     try {
       final result = await movieRemoteDataSources.getMovieList();
-      return result.toEntity();
+      return result.toList();
     } catch (e) {
+      log("movie repos $e");
       throw Exception();
     }
   }

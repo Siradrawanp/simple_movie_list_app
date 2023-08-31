@@ -1,5 +1,5 @@
-import '../entities/movie.dart';
+import '../../data/model/movie_model.dart';
 
 abstract class MovieRepository {
-  Future<MovieEntity> getMovieList();
+  Future<List<MovieModel>> getMovieList();
 }
