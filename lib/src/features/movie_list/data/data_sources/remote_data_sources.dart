@@ -23,7 +23,7 @@ class MovieRemoteDataSourcesImpl extends MovieRemoteDataSources {
             title: json["Title"], 
             year: json["Year"], 
             runtime: json["Runtime"], 
-            poster: "Poster")).toList();
+            poster: json["Poster"] ?? "no image")).toList();
           
         } else {
           throw Exception('No data returned from API');
