@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movie_app/src/features/movie_list/presentation/widgets/card_widget.dart';
 
 import '../provider/ui_movie_provider.dart';
+import '../widgets/card_widget.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});

@@ -1,7 +1,4 @@
 import 'dart:convert';
-
-import 'package:movie_app/src/features/movie_list/domain/entities/movie.dart';
-
 List<MovieModel> movieModelFromJson(String str) =>
     List<MovieModel>.from(json.decode(str).map((x) => MovieModel.fromJson(x)));
 
@@ -34,11 +31,4 @@ class MovieModel {
         "Runtime": runtime,
         "Poster": poster,
       };
-
-  MovieEntity toEntity() => MovieEntity(
-        title: title,
-        year: year,
-        runtime: runtime,
-        poster: poster,
-      );
 }
