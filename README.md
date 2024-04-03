@@ -3,6 +3,8 @@
 a movie list app using Riverpod and Dio package. 
 Tested in web and android.
 
+Developed for a job test requirement.
+
 ## Screenshot
 | | |
 |:-------------------------:|:-------------------------:|
